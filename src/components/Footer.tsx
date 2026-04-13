@@ -23,7 +23,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="font-sans text-2xl font-light tracking-[0.2em] text-background mb-4">
-              HAPPILEE WED
+              HAPPILEEWED
             </p>
             <p className="font-body text-sm leading-relaxed text-background/60">
               Crafting unforgettable wedding moments through expert choreography
@@ -77,7 +77,7 @@ export default function Footer() {
         <Separator className="my-10 bg-background/10" />
 
         <p className="font-body text-xs text-background/40 text-center tracking-wide">
-          © {new Date().getFullYear()} Happilee Wed. All rights reserved.
+          © {new Date().getFullYear()} HappileeWed. All rights reserved.
         </p>
       </div>
     </footer>

@@ -34,7 +34,9 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled
+          ? "bg-background/95 backdrop-blur-md shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -43,7 +45,7 @@ export default function Navbar() {
           href="/"
           className="font-sans text-2xl font-light tracking-[0.2em] text-foreground hover:text-primary transition-colors"
         >
-          HAPPILEE WED
+          HAPPILEEWED
         </Link>
 
         {/* Desktop links */}
@@ -86,7 +88,7 @@ export default function Navbar() {
           <SheetContent side="right" className="w-64">
             <SheetHeader>
               <SheetTitle className="font-sans font-light tracking-[0.2em] text-lg text-left">
-                HAPPILEE WED
+                HAPPILEEWED
               </SheetTitle>
             </SheetHeader>
             <ul className="mt-8 flex flex-col gap-6">

@@ -87,16 +87,16 @@ export default function AboutPage() {
                 Born from a love of love
               </h2>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
-                Happilee Wed was founded in 2018 by Maya Chen, a professional
-                dancer who kept being asked by engaged friends: &ldquo;Can you help us
-                with our first dance?&rdquo; What started as a favour quickly became a
-                calling.
+                HappileeWed was founded in 2018 by Maya Chen, a professional
+                dancer who kept being asked by engaged friends: &ldquo;Can you
+                help us with our first dance?&rdquo; What started as a favour
+                quickly became a calling.
               </p>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
-                Today, Happilee Wed is a full-service wedding choreography and
-                event planning studio. We&apos;ve had the honour of celebrating over
-                500 couples — helping each one feel completely at home in their
-                own wedding day.
+                Today, HappileeWed is a full-service wedding choreography and
+                event planning studio. We&apos;ve had the honour of celebrating
+                over 500 couples — helping each one feel completely at home in
+                their own wedding day.
               </p>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
                 We are based in San Francisco and work with couples across
@@ -202,10 +202,12 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-sans text-4xl font-light mb-4 leading-snug">
-            We&apos;d love to be part of <em className="text-primary">your</em> story.
+            We&apos;d love to be part of <em className="text-primary">your</em>{" "}
+            story.
           </h2>
           <p className="font-body text-background/60 mb-8 leading-relaxed">
-            Reach out and let&apos;s start planning something beautiful together.
+            Reach out and let&apos;s start planning something beautiful
+            together.
           </p>
           <Button
             render={<Link href="/contact" />}

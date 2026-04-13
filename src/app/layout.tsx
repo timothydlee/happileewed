@@ -18,13 +18,13 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: {
-    default: "Happilee Wed — Wedding Choreography & Event Planning",
-    template: "%s | Happilee Wed",
+    default: "HappileeWed — Wedding Choreography & Event Planning",
+    template: "%s | HappileeWed",
   },
   description:
-    "Happilee Wed crafts unforgettable wedding moments through expert choreography, elegant coordination, and personalised event design.",
+    "HappileeWed crafts unforgettable wedding moments through expert choreography, elegant coordination, and personalised event design.",
   openGraph: {
-    siteName: "Happilee Wed",
+    siteName: "HappileeWed",
     type: "website",
   },
 };
@@ -34,9 +34,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${lato.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">
-        {children}
-      </body>
+      <body className="min-h-full flex flex-col antialiased">{children}</body>
     </html>
   );
 }
