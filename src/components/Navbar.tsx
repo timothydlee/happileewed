@@ -97,7 +97,7 @@ export default function Navbar() {
                   <Link
                     href={href}
                     className={`font-body text-sm tracking-widest uppercase transition-colors hover:text-primary ${
-                      pathname === href ? "text-primary" : "text-foreground/70"
+                      pathname === href ? "text-primary" : "accent-gray-50"
                     }`}
                   >
                     {label}

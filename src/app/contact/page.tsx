@@ -12,7 +12,7 @@ import SiteLayout from "@/components/SiteLayout";
    Sign up at https://formspree.io and paste the form ID:
    e.g. "https://formspree.io/f/xyzabcde"
    ────────────────────────────────────────────────────────── */
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORM_ENDPOINT = "https://formspree.io/f/xrerpvvw";
 
 const services = [
   "First Dance Choreography",
@@ -43,9 +43,7 @@ function Field({
         {required && <span className="text-primary ml-1">*</span>}
       </label>
       {children}
-      {error && (
-        <p className="font-body text-xs text-destructive">{error}</p>
-      )}
+      {error && <p className="font-body text-xs text-destructive">{error}</p>}
     </div>
   );
 }
@@ -73,14 +71,17 @@ export default function ContactPage() {
       try {
         const res = await fetch(FORM_ENDPOINT, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify(value),
         });
         if (!res.ok) throw new Error("Submission failed");
         setSubmitted(true);
       } catch {
         setServerError(
-          "Something went wrong. Please try again or email us directly at hello@happileewed.com."
+          "Something went wrong. Please try again or email us directly at hello@happileewed.com.",
         );
       }
     },
@@ -103,8 +104,8 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="font-body text-background/60 leading-relaxed max-w-xl mx-auto">
-            Tell us about your wedding and we&apos;ll reach out to schedule a free
-            30-minute consultation.
+            Tell us about your wedding and we&apos;ll reach out to schedule a
+            free 30-minute consultation.
           </p>
         </motion.div>
       </section>
@@ -125,12 +126,12 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col gap-5">
                 {[
-                  { icon: Mail, label: "hello@happileewed.com" },
-                  { icon: Phone, label: "+1 (555) 000-0000" },
-                  { icon: MapPin, label: "San Francisco, CA" },
+                  { icon: Mail, label: "timmy.dan.lee@gmail.com" },
+                  { icon: Phone, label: "+1 (330) 221-9571" },
+                  { icon: MapPin, label: "Orlando, FL" },
                 ].map(({ icon: Icon, label }) => (
                   <div key={label} className="flex gap-3 items-start">
-                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center shrink-0 mt-0.5">
                       <Icon size={14} className="text-primary" />
                     </div>
                     <p className="font-body text-sm text-muted-foreground leading-relaxed">
@@ -166,9 +167,7 @@ export default function ContactPage() {
               <Card className="border-primary/30">
                 <CardContent className="p-10 flex flex-col items-center text-center gap-4">
                   <CheckCircle size={40} className="text-primary" />
-                  <h2 className="font-sans text-3xl font-light">
-                    Thank you!
-                  </h2>
+                  <h2 className="font-sans text-3xl font-light">Thank you!</h2>
                   <p className="font-body text-muted-foreground leading-relaxed max-w-sm">
                     We&apos;ve received your message and will be in touch within
                     one business day to schedule your free consultation.
@@ -194,7 +193,11 @@ export default function ContactPage() {
                     }}
                   >
                     {(field) => (
-                      <Field label="Your name" error={field.state.meta.errors[0]?.toString()} required>
+                      <Field
+                        label="Your name"
+                        error={field.state.meta.errors[0]?.toString()}
+                        required
+                      >
                         <input
                           className={inputClass}
                           placeholder="Jane & John"
@@ -218,7 +221,11 @@ export default function ContactPage() {
                     }}
                   >
                     {(field) => (
-                      <Field label="Email address" error={field.state.meta.errors[0]?.toString()} required>
+                      <Field
+                        label="Email address"
+                        error={field.state.meta.errors[0]?.toString()}
+                        required
+                      >
                         <input
                           className={inputClass}
                           type="email"
@@ -273,7 +280,11 @@ export default function ContactPage() {
                   }}
                 >
                   {(field) => (
-                    <Field label="Service you're interested in" error={field.state.meta.errors[0]?.toString()} required>
+                    <Field
+                      label="Service you're interested in"
+                      error={field.state.meta.errors[0]?.toString()}
+                      required
+                    >
                       <select
                         className={inputClass}
                         value={field.state.value}
@@ -307,7 +318,9 @@ export default function ContactPage() {
                 </form.Field>
 
                 {serverError && (
-                  <p className="font-body text-sm text-destructive">{serverError}</p>
+                  <p className="font-body text-sm text-destructive">
+                    {serverError}
+                  </p>
                 )}
 
                 <form.Subscribe selector={(state) => state.isSubmitting}>
